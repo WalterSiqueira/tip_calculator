@@ -1,0 +1,210 @@
+/*small devices version */
+@media screen and (max-width:  480px) {
+  * {
+    margin:  0;
+    padding:  0;
+    font-family: Space-Mono;
+  }
+  .main_block {
+    display:  grid;
+    grid-template-areas:
+      ". VInput ."
+      ". TSelect ."
+      ". NPeople ."
+      ". TAmount .";
+    grid-template-columns: 90px 300px 90px;
+    grid-template-rows: 100px 200px 100px 280px 10px 10px;
+  }
+  .logo_block {
+    background-color: hsl(185, 41%, 84%);
+    width:  480px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 100px 50px 50px 50px 50px 100px;
+    grid-template-rows:  25px 25px 25px 25px;
+  }
+  .logo_svg {
+    grid-column-start:  4;
+    grid-column-end:  6;
+    grid-row-start:  2;
+    grid-row-end:  4;
+  }
+  .subtitle {
+    color:  hsl(183, 100%, 15%);
+    font-size:  16px;
+  }
+  .input {
+    width: 280px;
+    height: 35px;
+    font-size: 18px;
+    grid-area: inputBar;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+    border-style: hidden;
+    text-align: right;
+  }
+
+  .value_input_block {
+    margin-top: 20px;
+    width:  300px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 40px 100px 50px 50px 100px;
+    grid-template-rows: 25px 25px;
+    grid-area: VInput;
+  }
+  h3.subtitle {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .bill_input {
+    grid-column-start: 1;
+    grid-column-end:  4;
+    grid-row-start:  2;
+    grid-row-end:  3;
+  }
+  .tip_panel {
+    width:  300px;
+    height: 200px;
+    display: grid;
+    grid-template-areas:
+      "subTitle subTitle"
+      "fiveBtn tenBtn"
+      "fifteenBtn TFiveBtn"
+      "fiftyBtn customBtn";
+    grid-gap: 10px;
+    grid-template-rows: 25px 45px 45px 45px;
+    grid-template-columns: 145px 145px;
+    grid-area: TSelect;
+  }
+  .fivebtn {
+    grid-area: fiveBtn;
+    height: 45px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 7px;
+    border-color: hsl(183, 100%, 15%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .tenbtn {
+    grid-area: tenBtn;
+    height: 45px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 7px;
+    border-color: hsl(183, 100%, 15%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .fifteenbtn {
+    grid-area: fifteenBtn;
+    height: 45px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 7px;
+    border-color: hsl(183, 100%, 15%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .twbtn {
+    grid-area: TFiveBtn;
+    height: 45px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 7px;
+    border-color: hsl(183, 100%, 15%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .fiftybtn {
+    grid-area: fiftyBtn;
+    height: 45px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 7px;
+    border-color: hsl(183, 100%, 15%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .Custombtn {
+    grid-area: customBtn;
+    height: 45px;
+    background-color: hsl(185, 41%, 84%);
+    border-radius: 7px;
+    border-color: hsl(185, 41%, 84%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .people_input {
+    margin-top: 10px;
+    width: 300px;
+    height: 100px;
+    display: grid;
+    grid-template-areas:
+      "subtitle"
+      "inputBar";
+    grid-template-columns:  300px;
+    grid-template-rows:  25px 35px;
+    grid-area: NPeople;
+  }
+  .people_inputF {
+    margin-top: 2px;
+
+  }
+  .result_panel {
+    width:  300px;
+    height: 250px;
+    border-radius: 15px;
+    background-color: hsl(183, 100%, 18%);
+    display:  grid;
+    grid-template-areas:
+      ". tiptitle outputone"
+      ". personsub ."
+      ". totaltitle outputtwo"
+      ". personsubtwo ."
+      ". resetbtn resetbtn";
+    grid-template-columns:  20px 100px 100px 40px;
+    grid-template-rows:  25px 25px 25px 25px 45px;
+    grid-gap: 20px;
+    grid-area: TAmount;
+  }
+  .subtitle_Res {
+    margin: 20px 0 0 0;
+    color:  hsl(0, 0%, 100%);
+    font-size:  14px;
+    grid-area: tiptitle;
+  }
+  .tipAP {
+    margin: 20px 0 0 0;
+    color: hsl(172, 67%, 45%);
+    font-size:  20px;
+    grid-area: outputone;
+  }
+  .subRes1 {
+    color:  hsl(186, 14%, 43%);
+    grid-area: personsub;
+  }
+  .subtitle_res {
+    margin: 20px 0 0 0;
+    color:  hsl(0, 0%, 100%);
+    font-size:  14px;
+    grid-area: totaltitle;
+  }
+  .totalP {
+    margin: 20px 0 0 0;
+    color: hsl(172, 67%, 45%);
+    font-size:  20px;
+    grid-area: outputtwo
+  }
+  .subRes2 {
+    color:  hsl(186, 14%, 43%);
+    grid-area: personsubtwo;
+  }
+  .reset_btn {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-size:  20px;
+    border-radius: 7px;
+    border-color: hsl(172, 67%, 45%);
+    grid-area: resetbtn;
+  }
+
+}
