@@ -5,6 +5,9 @@
     padding:  0;
     font-family: Space-Mono;
   }
+  body {
+    background-color: hsl(185, 41%, 84%);
+  }
   .main_block {
     display:  grid;
     grid-template-areas:
@@ -14,6 +17,8 @@
       ". TAmount .";
     grid-template-columns: 90px 300px 90px;
     grid-template-rows: 100px 200px 100px 280px 10px 10px;
+    border-radius: 20px;
+    background-color: white;
   }
   .logo_block {
     background-color: hsl(185, 41%, 84%);
@@ -31,6 +36,10 @@
   }
   .subtitle {
     color:  hsl(183, 100%, 15%);
+    font-size:  16px;
+  }
+  .SubTitle {
+    color:  hsl(183, 100%, 15%);                                               
     font-size:  16px;
   }
   .input {
@@ -207,4 +216,218 @@
     grid-area: resetbtn;
   }
 
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    * { 
+      margin:  0;                                                                
+      padding:  0;                                                               
+      font-family: Space-Mono;
+    }
+      body {
+      background-color: hsl(185, 41%, 84%);
+      display: grid;
+      grid-template-areas: 
+        ". logoblock ."
+        ". mainblock ."
+        ". footblock .";
+      grid-template-columns: 100px 824px 100px;
+      grid-template-rows: 200px 400px 200px;
+      grid-gap: 0;
+    }
+    .logo_block {
+      grid-area: logoblock;
+      display: grid;
+      grid-template-areas: 
+        ". . ."
+        ". center ."
+        ". . .";
+        grid-template-columns: 367px 90px 367px;
+        grid-template-rows: 66px 66px 66px;
+    }
+        .logo_svg {
+          grid-area: center;
+        }
+    .main_block {
+      grid-area: mainblock;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 10px;
+      display: grid;
+      grid-template-areas:  
+        "ValueInput resultPanel"
+        "TipPanel resultPanel"
+        "PeopleInput resultPanel";
+      grid-template-columns: 412px 412px;
+      grid-template-rows: 100px 200px 100px;
+    }
+     .subtitle {
+      color:  hsl(183, 100%, 15%);                                               
+      font-size:  16px; 
+      grid-area: title;
+    }
+    .value_input_block {
+      grid-area: ValueInput;
+      display: grid;
+      grid-template-areas: 
+        ". . ."
+        ". center."
+        ". . .";
+      grid-template-columns: 20px 372px 20px;
+      grid-template-rows: 20px 60px 20px;
+    }
+        .SubTitle {
+          color:  hsl(183, 100%, 15%);
+          font-size: 16px;
+          margin: 10px 0 0 0;
+          grid-area: center;
+        }
+        .bill_input { 
+          margin: 30px 0 0 0;
+          grid-area:center;
+        }
+    .people_input {
+      grid-area: PeopleInput;
+      display: grid;                                                           
+      grid-template-areas:                                                     
+            ". title ."                                                            
+            ". inputBar ."                                                         
+            ". . .";                                                               
+      grid-template-columns: 18px 382px 15px;                                  
+      grid-template-rows: 22px 35px 20px;
+    }
+        .people_inputF {
+          margin: 5px 0 0 0;
+          grid-area: inputBar;
+        }
+        .input {
+          width: 372px;                                                              
+          height: 35px;                                                              
+          font-size: 20px;                                                                                                                 
+          color: hsl(183, 100%, 15%);                                               
+          background-color: hsl(185, 41%, 84%);                                      
+          border-style: hidden;                                                     
+          text-align: right;
+        }
+    .tip_panel {
+      margin: 20px 0 0 0;
+      grid-area: TipPanel;
+      display: grid;
+      grid-template-areas:  
+        ". title title title ."
+        ". fiveBTN tenBTN fifteenBTN ."
+        ". twBTN fiftyBTN customBTN .";
+      grid-template-columns: 15px 122px 122px 122px 15px;
+      grid-template-rows: 20px 60px 60px 60px;
+      grid-gap: 5px;
+    }
+        .fivebtn {
+          background-color: hsl(183, 100%, 15%);
+          color: hsl(0, 0%, 100%);
+          border-color: hsl(183, 100%, 15%);
+          border-radius: 5px;
+          font-size: 20px;
+          margin: 10px 5px 10px 5px;
+          grid-area: fiveBTN;
+        }
+        .tenbtn {
+          background-color: hsl(183, 100%, 15%);
+          color: hsl(0, 0%, 100%);
+          border-color: hsl(183, 100%, 15%);
+          border-radius: 5px;
+          font-size: 20px;
+          margin: 10px 5px 10px 5px;
+          grid-area: tenBTN;
+        }
+        .fifteenbtn {
+          background-color: hsl(183, 100%, 15%);
+          color: hsl(0, 0%, 100%);
+          border-radius: 5px;
+          font-size: 20px;
+          border-color: hsl(183, 100%, 15%);
+          margin: 10px 5px 10px 5px;
+          grid-area: fifteenBTN;
+        }
+        .twbtn {
+          background-color: hsl(183, 100%, 15%);
+          color: hsl(0, 0%, 100%);
+          border-color: hsl(183, 100%, 15%);
+          border-radius: 5px;
+          font-size: 20px;
+          margin: 10px 5px 10px 5px;
+          grid-area: twBTN;
+        }
+        .fiftybtn {
+          background-color: hsl(183, 100%, 15%);
+          color: hsl(0, 0%, 100%); 
+          border-color: hsl(183, 100%, 15%);
+          border-radius: 5px;
+          font-size: 20px;
+          margin: 10px 5px 10px 5px;
+          grid-area: fiftyBTN;
+        }
+        .Custombtn {
+          background-color: hsl(185, 41%, 84%); 
+          color : hsl(183, 100%, 15%);
+          border-color: hsl(185, 41%, 84%);
+          border-radius: 5px;
+          font-size: 20px;
+          margin: 10px 5px 10px 5px;
+          grid-area: customBTN;
+        }
+    .result_panel {
+      margin: 20px;
+      background-color: hsl(183, 100%, 15%);
+      border-radius: 10px;
+      grid-area: resultPanel; 
+      display: grid;
+      grid-template-areas: 
+        " . ."
+        " title tipAmount" 
+        " title2 resultA" 
+        " . ."
+        " reset reset ";
+      grid-template-columns: 180px 180px;
+      grid-template-rows: 20px 50px 50px 135px 65px ;  
+      grid-gap: 10px;
+    }
+        .subtitle_Res {
+          color: hsl(0, 0%, 100%);
+          margin: 0 0 0 20px;
+          grid-area: title;
+        }
+        .subRes1 {
+          color: hsl(186, 14%, 43%); 
+          margin: 20px 0 0 20px;
+          grid-area: title;
+        }
+        .tipAP {
+          font-size: 25px;
+          color: hsl(172, 67%, 45%);
+          grid-area: tipAmount;  
+        }
+        .subtitle_res {
+          color: hsl(0, 0%, 100%);
+          margin: 0 0 0 20px;
+          grid-area: title2;
+        }
+        .subRes2 {
+          color: hsl(186, 14%, 43%); 
+          margin: 20px 0 0 20px;
+          grid-area: title2;
+        }
+        .totalP {
+          font-size: 30px;
+          color: hsl(172, 67%, 45%);
+          grid-area: resultA;
+        }
+        .reset_btn {
+          background-color: hsl(183, 100%, 25%); 
+          border-color: hsl(183, 100%, 15%);
+          border-radius: 10px;
+          margin: 10px 20px 15px 20px;
+          grid-area: reset;
+        }
+    .attribution {
+      grid-area: footblock;
+    }
 }
