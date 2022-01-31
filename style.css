@@ -236,28 +236,35 @@
       body {
       background-color: hsl(185, 41%, 84%);
       display: grid;
+      width: 100%;
+      height: 100%;
       grid-template-areas: 
         ". logoblock ."
         ". mainblock ."
         ". footblock .";
-      grid-template-columns: 100px 824px 100px;
-      grid-template-rows: 200px 400px 200px;
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
       grid-gap: 0;
     }
     .logo_block {
       grid-area: logoblock;
       display: grid;
+      width: 100%;
+      height: 100%;
       grid-template-areas: 
         ". . ."
         ". center ."
         ". . .";
-        grid-template-columns: 367px 90px 367px;
-        grid-template-rows: 66px 66px 66px;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
         .logo_svg {
+          margin: 0 0 0 25%;
           grid-area: center;
         }
     .main_block {
+      width: 100%;
+      height: 100%;
       grid-area: mainblock;
       background-color: hsl(0, 0%, 100%);
       border-radius: 10px;
@@ -266,10 +273,11 @@
         "ValueInput resultPanel"
         "TipPanel resultPanel"
         "PeopleInput resultPanel";
-      grid-template-columns: 412px 412px;
-      grid-template-rows: 100px 200px 100px;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: 0.5fr 1fr 0.5fr;
     }
      .subtitle {
+      margin: 5% 0 0 0;
       color:  hsl(183, 100%, 15%);                                               
       font-size:  16px; 
       grid-area: title;
@@ -281,17 +289,20 @@
         ". . ."
         ". center."
         ". . .";
-      grid-template-columns: 20px 372px 20px;
-      grid-template-rows: 20px 60px 20px;
+      grid-template-columns: 0.2fr 4fr 0.2fr;
+      grid-template-rows: 0.5fr 1fr 0.5fr;
     }
         .SubTitle {
+          width: 100%;
+          height: 100%;
           color:  hsl(183, 100%, 15%);
           font-size: 16px;
-          margin: 10px 0 0 0;
+          margin: 1% 0 0 0;
           grid-area: center;
         }
-        .bill_input { 
-          margin: 30px 0 0 0;
+        .bill_input {
+          height: 64%;
+          margin: 7% 0 0 0;
           grid-area:center;
         }
     .people_input {
@@ -301,16 +312,17 @@
             ". title ."                                                            
             ". inputBar ."                                                         
             ". . .";                                                               
-      grid-template-columns: 18px 382px 15px;                                  
-      grid-template-rows: 22px 35px 20px;
+      grid-template-columns: 0.2fr 4fr 0.2fr;                                  
+      grid-template-rows: 0.5fr 0.5fr 0.5fr;
     }
-        .people_inputF {
+        .people_inputF { 
+          height: 100%;
           margin: 5px 0 0 0;
           grid-area: inputBar;
         }
         .input {
-          width: 372px;                                                              
-          height: 35px;                                                              
+          width: 100%;                                                              
+          height: 100%;                                                              
           font-size: 20px;                                                                                                                 
           color: hsl(183, 100%, 15%);                                               
           background-color: hsl(185, 41%, 84%);                                      
@@ -318,16 +330,18 @@
           text-align: right;
         }
     .tip_panel {
-      margin: 20px 0 0 0;
+      margin: 2% 0 0 0;
       grid-area: TipPanel;
       display: grid;
+      width: 100%;
+      height: 100%;
       grid-template-areas:  
         ". title title title ."
         ". fiveBTN tenBTN fifteenBTN ."
         ". twBTN fiftyBTN customBTN .";
-      grid-template-columns: 15px 122px 122px 122px 15px;
-      grid-template-rows: 20px 60px 60px 60px;
-      grid-gap: 5px;
+      grid-template-columns: 0.2fr 2fr 2fr 2fr 0.2fr;
+      grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr;
+      grid-gap: 1%;
     }
         .fivebtn {
           background-color: hsl(183, 100%, 15%);
@@ -335,7 +349,7 @@
           border-color: hsl(183, 100%, 15%);
           border-radius: 5px;
           font-size: 20px;
-          margin: 10px 5px 10px 5px;
+          margin: 10% 8% 10% 8%;
           grid-area: fiveBTN;
         }
         .tenbtn {
@@ -344,7 +358,7 @@
           border-color: hsl(183, 100%, 15%);
           border-radius: 5px;
           font-size: 20px;
-          margin: 10px 5px 10px 5px;
+          margin: 10% 8% 10% 8%;
           grid-area: tenBTN;
         }
         .fifteenbtn {
@@ -353,7 +367,7 @@
           border-radius: 5px;
           font-size: 20px;
           border-color: hsl(183, 100%, 15%);
-          margin: 10px 5px 10px 5px;
+          margin: 10% 8% 10% 8%;
           grid-area: fifteenBTN;
         }
         .twbtn {
@@ -362,7 +376,7 @@
           border-color: hsl(183, 100%, 15%);
           border-radius: 5px;
           font-size: 20px;
-          margin: 10px 5px 10px 5px;
+          margin: 10% 8% 10% 8%;
           grid-area: twBTN;
         }
         .fiftybtn {
@@ -371,7 +385,8 @@
           border-color: hsl(183, 100%, 15%);
           border-radius: 5px;
           font-size: 20px;
-          margin: 10px 5px 10px 5px;
+          margin: 10% 8% 10% 8%;
+          
           grid-area: fiftyBTN;
         }
         .Custombtn {
@@ -380,33 +395,35 @@
           border-color: hsl(185, 41%, 84%);
           border-radius: 5px;
           font-size: 20px;
-          margin: 10px 5px 10px 5px;
+          margin: 10% 8% 10% 8%;
           grid-area: customBTN;
         }
     .result_panel {
-      margin: 20px;
+      margin: 5% 0 5% 0;
       background-color: hsl(183, 100%, 15%);
       border-radius: 10px;
       grid-area: resultPanel; 
       display: grid;
+      width: 90%;
+      height: 90%;
       grid-template-areas: 
         " . ."
         " title tipAmount" 
         " title2 resultA" 
         " . ."
         " reset reset ";
-      grid-template-columns: 180px 180px;
-      grid-template-rows: 20px 50px 50px 135px 65px ;  
-      grid-gap: 10px;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: 0.2fr 0.5fr 0.5fr 1fr 0.5fr ;  
+      grid-gap: 1%;
     }
         .subtitle_Res {
           color: hsl(0, 0%, 100%);
-          margin: 0 0 0 20px;
+          margin: 0 0 0 10%;
           grid-area: title;
         }
         .subRes1 {
           color: hsl(186, 14%, 43%); 
-          margin: 20px 0 0 20px;
+          margin: 10% 0 0 11%;
           grid-area: title;
         }
         .tipAP {
@@ -416,12 +433,12 @@
         }
         .subtitle_res {
           color: hsl(0, 0%, 100%);
-          margin: 0 0 0 20px;
+          margin: 0 0 0 10%;
           grid-area: title2;
         }
         .subRes2 {
           color: hsl(186, 14%, 43%); 
-          margin: 20px 0 0 20px;
+          margin: 10% 0 0 11%;
           grid-area: title2;
         }
         .totalP {
@@ -430,13 +447,17 @@
           grid-area: resultA;
         }
         .reset_btn {
+          width: 95%;
+          height: 80%;
           background-color: hsl(183, 100%, 25%); 
           border-color: hsl(183, 100%, 15%);
           border-radius: 10px;
-          margin: 10px 20px 15px 20px;
+          margin: 0 2% 0 2%;
           grid-area: reset;
         }
     .attribution {
+      width: 100%;
+      height: 100%;
       grid-area: footblock;
     }
 }
@@ -450,12 +471,14 @@
     body {
       background-color: hsl(185, 41%, 84%);                                    
       display: grid;                                                           
+      width: 100%;
+      height: 100%;
       grid-template-areas:                                                     
         ". logoblock ."                                                        
         ". mainblock ."                                                        
         ". footblock ."; 
-      grid-template-columns: 210px 1020px 210px;
-      grid-template-rows: 200px 400px 200px;
+      grid-template-columns: 2fr 8fr 2fr;
+      grid-template-rows: 2fr 8fr 1fr;
     }
     .logo_block {
       grid-area: logoblock;                                                    
@@ -464,32 +487,37 @@
         ". . ."                                                                
         ". center ."                                                           
         ". . .";
-      grid-template-columns: 460px 100px 460px;
-      grid-template-rows: 72px 55px 72px;
+      grid-template-columns: 2fr 1fr 2fr;
+      grid-template-rows: 0.5fr 0.2fr 0.5fr;
     }
         .logo_svg {
+            margin: 0 0 0 35%;
             grid-area: center;
         }
     .main_block {
       grid-area: mainblock;                                                  
       background-color: hsl(0, 0%, 100%);                                      
       border-radius: 10px;                                                     
-      display: grid;                                                           
+      display: grid;
+      width: 100%;
+      height: 100%;
       grid-template-areas:                                                     
         "ValueInput resultPanel"                                               
         "TipPanel resultPanel"                                                 
         "PeopleInput resultPanel";
-      grid-template-columns: 510px 510px;
-      grid-template-rows: 100px 200px 100px;
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: 1fr 2fr 1fr;
     }   
         .subtitle {
+          width: 100%;
+          height: 100%;
            color:  hsl(183, 100%, 15%);                                             
            font-size:  16px; 
            grid-area: title;
         }
         .input {
-           width: 470px;                                                        
-           height: 35px;                                                        
+           width: 100%;                                                        
+           height: 100%;                                                        
            font-size: 20px;                                                     
            color: hsl(183, 100%, 15%);                                          
            background-color: hsl(185, 41%, 84%);                                
@@ -503,28 +531,34 @@
               ". . ."                                                                
               ". center."                                                            
               ". . .";
-            grid-template-columns: 20px 470px 20px;
-            grid-template-rows: 20px 60px 20px;
+            grid-template-columns: 0.2fr 4fr 0.2fr;
+            grid-template-rows: 0.5fr 1fr 0.2fr;
         }
             .SubTitle {
+                width: 100%;
+                height: 100%;
                 color:  hsl(183, 100%, 15%);                                         
                 font-size: 16px;                                                     
                 grid-area: center;
             }
             .bill_input {
+                width: 100%;
+                height: 65%;
                 margin: 20px 0 0 0;
                 grid-area: center;
             }
         .tip_panel {
             grid-area: TipPanel;
             margin: 20px 0 0 0;                                                                                                           
-            display: grid;                                                           
+            display: grid;
+            width: 100%;
+            height: 70%;
             grid-template-areas:                                                     
                 ". title title title ."                                                
                 ". fiveBTN tenBTN fifteenBTN ."                                        
                 ". twBTN fiftyBTN customBTN .";
-            grid-template-columns: 20px 156px 156px 156px 20px;
-            grid-template-rows: 20px 60px 60px;
+            grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+            grid-template-rows: 0.2fr 0.5fr 0.5fr;
         }
             .fivebtn {
               background-color: hsl(183, 100%, 15%);                               
@@ -532,7 +566,7 @@
               border-color: hsl(183, 100%, 15%);                                   
               border-radius: 5px;                                                  
               font-size: 20px;                                                     
-              margin: 10px 5px 10px 5px;
+              margin: 10% 8% 10% 8%;
               grid-area: fiveBTN;
             }
             .tenbtn {
@@ -541,7 +575,7 @@
               border-color: hsl(183, 100%, 15%);                                   
               border-radius: 5px;                                                  
               font-size: 20px;                                                     
-              margin: 10px 5px 10px 5px;
+              margin: 10% 8% 10% 8%;
               grid-area: tenBTN;
             }
             .fifteenbtn {
@@ -550,7 +584,7 @@
               border-color: hsl(183, 100%, 15%);                                   
               border-radius: 5px;                                                  
               font-size: 20px;                                                     
-              margin: 10px 5px 10px 5px;
+              margin: 10% 8% 10% 8%;
               grid-area: fifteenBTN;
             }
             .twbtn {
@@ -559,7 +593,7 @@
               border-color: hsl(183, 100%, 15%);                                   
               border-radius: 5px;                                                  
               font-size: 20px;                                                     
-              margin: 10px 5px 10px 5px;
+              margin: 10% 8% 10% 8%;
               grid-area: twBTN;
             }
             .fiftybtn {
@@ -568,7 +602,7 @@
               border-color: hsl(183, 100%, 15%);                                   
               border-radius: 5px;                                                  
               font-size: 20px;                                                     
-              margin: 10px 5px 10px 5px;
+              margin: 10% 8% 10% 8%;
               grid-area: fiftyBTN;
             }
             .Custombtn {
@@ -577,20 +611,24 @@
               border-color: hsl(185, 41%, 84%);                                    
               border-radius: 5px;                                                  
               font-size: 20px;                                                     
-              margin: 10px 5px 10px 5px;
+              margin: 10% 8% 10% 8%;
               grid-area: customBTN;
             }
         .people_input {
             display: grid;                                                           
+            width: 100%;
+            height: 100%;
             grid-template-areas:                                                     
                 ". title ."                                                        
                 ". inputBar ."                                                     
                 ". . .";
-            grid-template-columns: 20px 470px 20px;
-            grid-template-rows: 20px 60px 20px;
+            grid-template-columns: 0.5fr 8fr 0.5fr;
+            grid-template-rows: 0.2fr 0.5fr 0.2fr;
             grid-area: PeopleInput;
         }
             .people_inputF {
+                width: 100%;
+                height: 75%;
                 margin: 5px 0 0 0;
                 grid-area: inputBar;
             }
@@ -599,44 +637,44 @@
           background-color: hsl(183, 100%, 15%);                                   
           border-radius: 10px;                                                     
           grid-area: resultPanel;                                                  
-          display: grid;                                                           
+          display: grid;
           grid-template-areas:                                                                                                                     
               " title tipAmount"                                                     
               " title2 resultA"                                                      
               " . ."                                                                 
               " reset reset ";
-          grid-template-columns: 235px 235px;
-          grid-template-rows: 60px 60px 170px 70px;
+          grid-template-columns: 2fr 2fr;
+          grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr;
           grid-area: resultPanel;
         }
             .subtitle_Res {
                 color: hsl(0, 0%, 100%);                                             
-                margin: 20px 0 0 20px;                                              
+                margin: 10% 0 0 10%;                                             
                 grid-area: title; 
             }
             .subRes1 {
                 color: hsl(186, 14%, 43%);                                             
-                margin: 40px 0 0 20px;                                              
+                margin: 20% 0 0 11%;                                              
                 grid-area: title;
             }
             .tipAP {
-                margin: 20px 0 0 0;
+                margin: 10% 0 0 0;
                 font-size: 25px;                                                     
                 color: hsl(172, 67%, 45%);                                           
                 grid-area: tipAmount;
             }
             .subtitle_res {
                 color: hsl(0, 0%, 100%);                                             
-                margin: 20px 0 0 20px;                                              
+                margin: 10% 0 0 11%;                                             
                 grid-area: title2;
             }
             .subRes2 {
                 color: hsl(186, 14%, 43%);                                            
-                margin: 40px 0 0 20px;                                              
+                margin: 20% 0 0 11%;                                              
                 grid-area: title2;
             }
             .totalP {
-                margin: 20px 0 0 0; 
+                margin: 10% 0 0 0; 
                 font-size: 30px;                                                     
                 color: hsl(172, 67%, 45%);                                           
                 grid-area: resultA;
@@ -645,7 +683,9 @@
                 background-color: hsl(183, 100%, 25%);                               
                 border-color: hsl(183, 100%, 15%);                                   
                 border-radius: 10px;                                                 
-                margin: 10px 20px 15px 20px;                                         
+                width: 90%;
+                height: 80%;
+                margin: 2% 10% 5% 5%;                                         
                 grid-area: reset;                                                    
             }
       .attribution {
