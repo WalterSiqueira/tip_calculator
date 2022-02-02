@@ -13,12 +13,10 @@
     width: 100%;
     height: 90%;
     grid-template-areas:
-      ". VInput ."
-      ". TSelect ."
-      ". NPeople ."
+      ". form ."
       ". TAmount .";
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 0.5fr 2fr 1fr 2fr 0.5fr;
+    grid-template-rows: 6fr 2fr 1fr;
     border-radius: 2vh;
     background-color: white;
   }
@@ -39,6 +37,18 @@
   .logo_svg {
     grid-area: center;
   }
+  .form_block {
+    width: 100%;
+    height: 100%;
+    grid-area: form;
+    display: grid;
+    grid-template-areas:
+      "ValueI"
+      "tipPanel"
+      "peopleI";
+    grid-template-columns: 4fr;
+    grid-template-rows: 2fr 4fr 2fr;
+  }
   /*subtitles (select and number)*/
   .subtitle {
     margin: 10% 0 0 0;
@@ -53,10 +63,11 @@
   }
   /*input bar*/
   .input {
+    margin: 10% 0 0 0;
     width: 100%;
-    height: 58%;
+    height: 40%;
     font-size: 18px;
-    grid-area: inputBar;
+    grid-area: center;
     color: hsl(183, 100%, 15%);
     background-color: hsl(185, 41%, 84%);
     border-style: hidden;
@@ -70,18 +81,13 @@
     display: grid;
     grid-template-areas: 
       " ."
-      " center "
-      " . ";
-    grid-template-columns:  4fr;
-    grid-template-rows: 1fr 2fr 1fr;
-    grid-area: VInput;
+      " center"
+      " .";
+    grid-template-columns:  8fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-area: ValueI;
   } 
-    .bill_input {
-      width: 100%;
-      height: 100%;
-      margin: 7% 0 0 0;
-      grid-area: center; 
-  }
+
   .tip_panel {
     width:  100%;
     height: 80%;
@@ -94,11 +100,11 @@
     grid-gap: 10px ;
     grid-template-rows: 0.5fr 1fr 1fr 1fr;
     grid-template-columns: 2fr 2fr;
-    grid-area: TSelect;
+    grid-area: tipPanel;
   }
-  .fivebtn {
+  .fivebtn { 
     grid-area: fiveBtn;
-    height: 90%;
+    height: 80%;
     background-color: hsl(183, 100%, 15%);
     border-radius: 2vh;
     border-color: hsl(183, 100%, 15%);
@@ -107,7 +113,7 @@
   }
   .tenbtn {
     grid-area: tenBtn;
-    height: 90%;
+    height: 80%;
     background-color: hsl(183, 100%, 15%);
     border-radius: 2vh;
     border-color: hsl(183, 100%, 15%);
@@ -116,7 +122,7 @@
   }
   .fifteenbtn {
     grid-area: fifteenBtn;
-    height: 90%;
+    height: 80%;
     background-color: hsl(183, 100%, 15%);
     border-radius: 2vh;
     border-color: hsl(183, 100%, 15%);
@@ -125,7 +131,7 @@
   }
   .twbtn {
     grid-area: TFiveBtn;
-    height: 90%;
+    height: 80%;
     background-color: hsl(183, 100%, 15%);
     border-radius: 2vh;
     border-color: hsl(183, 100%, 15%);
@@ -134,7 +140,7 @@
   }
   .fiftybtn {
     grid-area: fiftyBtn;
-    height: 90%;
+    height: 80%;
     background-color: hsl(183, 100%, 15%);
     border-radius: 2vh;
     border-color: hsl(183, 100%, 15%);
@@ -143,7 +149,7 @@
   }
   .Custombtn {
     grid-area: customBtn;
-    height: 90%;
+    height: 80%;
     background-color: hsl(185, 41%, 84%);
     border-radius: 2vh;
     border-color: hsl(185, 41%, 84%);
@@ -151,21 +157,19 @@
     font-size:  20px;
   }
   .people_input {
-    margin: 2% 0 0 0;
-    width: 100%;
-    height: 80%;
-    display: grid;
-    grid-template-areas:
-      "subtitle"
-      "inputBar";
-    grid-template-columns:  4fr;
-    grid-template-rows:  0.5fr 1fr;
-    grid-area: NPeople;
+     margin-top: 2%;                                                             
+     width:  100%;                                                               
+     height: 90%;                                                                
+     display: grid;                                                              
+     grid-template-areas:                                                        
+        " ."                                                                      
+        " center"                                                                 
+        " .";                                                                     
+     grid-template-columns:  8fr;                                                
+     grid-template-rows: 0.2fr 2fr 0.2fr;
+     grid-area: peopleI;
   }
-  .people_inputF {
-    margin-top: 1%;
 
-  }
   .result_panel {
     width:  100%;
     height: 100%;
@@ -194,6 +198,7 @@
     color: hsl(172, 67%, 45%);
     font-size:  20px;
     grid-area: outputone;
+    word-spacing: 1em;
   }
   .subRes1 {
     color:  hsl(186, 14%, 43%);
@@ -209,7 +214,8 @@
     margin: 2% 0 0 0;
     color: hsl(172, 67%, 45%);
     font-size:  20px;
-    grid-area: outputtwo
+    grid-area: outputtwo;
+    word-spacing: 1em;
   }
   .subRes2 {
     color:  hsl(186, 14%, 43%);
@@ -262,6 +268,7 @@
           margin: 0 0 0 25%;
           grid-area: center;
         }
+
     .main_block {
       width: 100%;
       height: 100%;
@@ -270,11 +277,23 @@
       border-radius: 10px;
       display: grid;
       grid-template-areas:  
-        "ValueInput resultPanel"
-        "TipPanel resultPanel"
-        "PeopleInput resultPanel";
+        "form resultPanel"
+        "form resultPanel"
+        "form resultPanel";
       grid-template-columns: 2fr 2fr;
       grid-template-rows: 0.5fr 1fr 0.5fr;
+    }
+    .form_block {                                                                 
+      width: 100%;                                                                
+      height: 100%;                                                               
+      grid-area: form;                                                            
+      display: grid;                                                              
+      grid-template-areas:                                                        
+        "ValueI"                                                                  
+        "tipPanel"                                                                
+        "peopleI";                                                                
+      grid-template-columns: 4fr;                                                 
+      grid-template-rows: 2fr 4fr 2fr;                                            
     }
      .subtitle {
       margin: 5% 0 0 0;
@@ -283,7 +302,7 @@
       grid-area: title;
     }
     .value_input_block {
-      grid-area: ValueInput;
+      grid-area: ValueI;
       display: grid;
       grid-template-areas: 
         ". . ."
@@ -300,38 +319,32 @@
           margin: 1% 0 0 0;
           grid-area: center;
         }
-        .bill_input {
-          height: 64%;
-          margin: 7% 0 0 0;
-          grid-area:center;
-        }
+
     .people_input {
-      grid-area: PeopleInput;
+      grid-area: peopleI;
       display: grid;                                                           
-      grid-template-areas:                                                     
-            ". title ."                                                            
-            ". inputBar ."                                                         
-            ". . .";                                                               
-      grid-template-columns: 0.2fr 4fr 0.2fr;                                  
-      grid-template-rows: 0.5fr 0.5fr 0.5fr;
+      grid-template-areas:                                                
+         ". . ."                                                           
+         ". center."                                                       
+         ". . .";                                                          
+      grid-template-columns: 0.2fr 4fr 0.2fr;                             
+      grid-template-rows: 0.5fr 1fr 0.5fr;
     }
-        .people_inputF { 
-          height: 100%;
-          margin: 5px 0 0 0;
-          grid-area: inputBar;
-        }
+
         .input {
+          margin: 10% 0 0 0;
           width: 100%;                                                              
-          height: 100%;                                                              
+          height: 50%;                                                              
           font-size: 20px;                                                                                                                 
           color: hsl(183, 100%, 15%);                                               
           background-color: hsl(185, 41%, 84%);                                      
           border-style: hidden;                                                     
           text-align: right;
+          grid-area: center;
         }
     .tip_panel {
       margin: 2% 0 0 0;
-      grid-area: TipPanel;
+      grid-area: tipPanel;
       display: grid;
       width: 100%;
       height: 100%;
@@ -349,7 +362,7 @@
           border-color: hsl(183, 100%, 15%);
           border-radius: 5px;
           font-size: 20px;
-          margin: 10% 8% 10% 8%;
+          margin: 5% 4% 5% 4%;
           grid-area: fiveBTN;
         }
         .tenbtn {
@@ -358,7 +371,7 @@
           border-color: hsl(183, 100%, 15%);
           border-radius: 5px;
           font-size: 20px;
-          margin: 10% 8% 10% 8%;
+          margin: 5% 4% 5% 4%;
           grid-area: tenBTN;
         }
         .fifteenbtn {
@@ -367,7 +380,7 @@
           border-radius: 5px;
           font-size: 20px;
           border-color: hsl(183, 100%, 15%);
-          margin: 10% 8% 10% 8%;
+          margin: 5% 4% 5% 4%;
           grid-area: fifteenBTN;
         }
         .twbtn {
@@ -376,7 +389,7 @@
           border-color: hsl(183, 100%, 15%);
           border-radius: 5px;
           font-size: 20px;
-          margin: 10% 8% 10% 8%;
+          margin: 5% 4% 5% 4%;
           grid-area: twBTN;
         }
         .fiftybtn {
@@ -385,8 +398,7 @@
           border-color: hsl(183, 100%, 15%);
           border-radius: 5px;
           font-size: 20px;
-          margin: 10% 8% 10% 8%;
-          
+          margin: 5% 4% 5% 4%; 
           grid-area: fiftyBTN;
         }
         .Custombtn {
@@ -395,7 +407,7 @@
           border-color: hsl(185, 41%, 84%);
           border-radius: 5px;
           font-size: 20px;
-          margin: 10% 8% 10% 8%;
+          margin: 5% 4% 5% 4%;
           grid-area: customBTN;
         }
     .result_panel {
@@ -430,6 +442,7 @@
           font-size: 25px;
           color: hsl(172, 67%, 45%);
           grid-area: tipAmount;  
+          word-spacing: 1em;
         }
         .subtitle_res {
           color: hsl(0, 0%, 100%);
@@ -445,6 +458,7 @@
           font-size: 30px;
           color: hsl(172, 67%, 45%);
           grid-area: resultA;
+          word-spacing: 1em;
         }
         .reset_btn {
           width: 95%;
@@ -502,9 +516,9 @@
       width: 100%;
       height: 100%;
       grid-template-areas:                                                     
-        "ValueInput resultPanel"                                               
-        "TipPanel resultPanel"                                                 
-        "PeopleInput resultPanel";
+        "form resultPanel"                                               
+        "form resultPanel"                                                 
+        "form resultPanel";
       grid-template-columns: 2fr 2fr;
       grid-template-rows: 1fr 2fr 1fr;
     }   
@@ -517,15 +531,29 @@
         }
         .input {
            width: 100%;                                                        
-           height: 100%;                                                        
+           height: 50%;                                                        
            font-size: 20px;                                                     
            color: hsl(183, 100%, 15%);                                          
            background-color: hsl(185, 41%, 84%);                                
            border-style: hidden;                                                
            text-align: right; 
+           grid-area: center;
+           margin: 5% 0 0 0;
+        }
+        .form_block {
+          width: 100%;                                                        
+          height: 100%;                                                       
+          grid-area: form;                                                    
+          display: grid;                                                      
+          grid-template-areas:                                                
+            "ValueI"                                                          
+            "tipPanel"                                                        
+            "peopleI";                                                        
+          grid-template-columns: 4fr;                                         
+          grid-template-rows: 2fr 4fr 2fr; 
         }
         .value_input_block {
-            grid-area: ValueInput;                                           
+            grid-area: ValueI;                                           
             display: grid;                                                           
             grid-template-areas:                                                     
               ". . ."                                                                
@@ -540,27 +568,23 @@
                 color:  hsl(183, 100%, 15%);                                         
                 font-size: 16px;                                                     
                 grid-area: center;
-            }
-            .bill_input {
-                width: 100%;
-                height: 65%;
-                margin: 20px 0 0 0;
-                grid-area: center;
-            }
+            } 
         .tip_panel {
-            grid-area: TipPanel;
+            grid-area: tipPanel;
             margin: 20px 0 0 0;                                                                                                           
             display: grid;
             width: 100%;
             height: 70%;
             grid-template-areas:                                                     
-                ". title title title ."                                                
-                ". fiveBTN tenBTN fifteenBTN ."                                        
-                ". twBTN fiftyBTN customBTN .";
-            grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+                ". title title title "                                                
+                ". fiveBTN tenBTN fifteenBTN "                                        
+                ". twBTN fiftyBTN customBTN ";
+            grid-template-columns: 0.2fr 1fr 1fr 1fr;
             grid-template-rows: 0.2fr 0.5fr 0.5fr;
         }
             .fivebtn {
+              height: 70%;
+              width: 80%;
               background-color: hsl(183, 100%, 15%);                               
               color: hsl(0, 0%, 100%);                                             
               border-color: hsl(183, 100%, 15%);                                   
@@ -570,6 +594,8 @@
               grid-area: fiveBTN;
             }
             .tenbtn {
+              height: 70%;
+              width: 80%;
               background-color: hsl(183, 100%, 15%);                               
               color: hsl(0, 0%, 100%);                                             
               border-color: hsl(183, 100%, 15%);                                   
@@ -579,6 +605,8 @@
               grid-area: tenBTN;
             }
             .fifteenbtn {
+              height: 70%;
+              width: 80%;
               background-color: hsl(183, 100%, 15%);                               
               color: hsl(0, 0%, 100%);                                             
               border-color: hsl(183, 100%, 15%);                                   
@@ -588,6 +616,8 @@
               grid-area: fifteenBTN;
             }
             .twbtn {
+              height: 70%;
+              width: 80%;
               background-color: hsl(183, 100%, 15%);                               
               color: hsl(0, 0%, 100%);                                             
               border-color: hsl(183, 100%, 15%);                                   
@@ -597,6 +627,8 @@
               grid-area: twBTN;
             }
             .fiftybtn {
+              height: 70%;
+              width: 80%;
               background-color: hsl(183, 100%, 15%);                               
               color: hsl(0, 0%, 100%);                                             
               border-color: hsl(183, 100%, 15%);                                   
@@ -606,32 +638,29 @@
               grid-area: fiftyBTN;
             }
             .Custombtn {
+              width: 80%;
+              height: 60%;
               background-color: hsl(185, 41%, 84%);                                
               color : hsl(183, 100%, 15%);                                         
               border-color: hsl(185, 41%, 84%);                                    
               border-radius: 5px;                                                  
               font-size: 20px;                                                     
-              margin: 10% 8% 10% 8%;
+              margin: 10% 0 5% 7%;
               grid-area: customBTN;
             }
         .people_input {
             display: grid;                                                           
             width: 100%;
             height: 100%;
-            grid-template-areas:                                                     
-                ". title ."                                                        
-                ". inputBar ."                                                     
-                ". . .";
-            grid-template-columns: 0.5fr 8fr 0.5fr;
-            grid-template-rows: 0.2fr 0.5fr 0.2fr;
-            grid-area: PeopleInput;
+            grid-template-areas:                                          
+              ". . ."                                                     
+              ". center."                                                 
+              ". . .";                                                    
+            grid-template-columns: 0.2fr 4fr 0.2fr;                       
+            grid-template-rows: 0.5fr 1fr 0.2fr;
+            grid-area: peopleI;
         }
-            .people_inputF {
-                width: 100%;
-                height: 75%;
-                margin: 5px 0 0 0;
-                grid-area: inputBar;
-            }
+            
         .result_panel {
           margin: 20px;                                                            
           background-color: hsl(183, 100%, 15%);                                   
@@ -662,6 +691,7 @@
                 font-size: 25px;                                                     
                 color: hsl(172, 67%, 45%);                                           
                 grid-area: tipAmount;
+                word-spacing: 1em;
             }
             .subtitle_res {
                 color: hsl(0, 0%, 100%);                                             
@@ -678,6 +708,7 @@
                 font-size: 30px;                                                     
                 color: hsl(172, 67%, 45%);                                           
                 grid-area: resultA;
+                word-spacing: 1em;
             }
             .reset_btn {                                                           
                 background-color: hsl(183, 100%, 25%);                               
