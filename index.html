@@ -17,26 +17,24 @@
 <body>
     <header class="logo_block"> <img src="./images/logo.svg" class="logo_svg"> </header>
     <main class="main_block">
+      <form class="form_block" " id="formBlock">
           <section class="value_input_block">
             <h3 class="SubTitle">Bill</h3>
-            <form type="number" method="post" class="bill_input">
-              <input placeholder="$" class='input' id="bill">
-            </form>
+              <input placeholder="$" class='input' id="bill" inputmode="numeric">
           </section>
           <section class="tip_panel">
             <h3 class="subtitle" class="SelectTip">Select Tip %</h3>
-            <button class="fivebtn" id="fivebtn">5%</button>
-            <button class="tenbtn" id="tenbtn">10%</button>
-            <button class="fifteenbtn" id="fifteenbtn">15%</button>
-            <button class="twbtn" id="twbtn">25%</button>
-            <button class="fiftybtn" id="fiftybtn">50%</button>
-            <button class="Custombtn" id="custombtn">Custom</button>
+            <button class="fivebtn" id="fivebtn" onclick="send(5)" value=5 >5%</button>
+            <button class="tenbtn" id="tenbtn" value=10 onclick="send(10)">10%</button>
+            <button class="fifteenbtn" id="fifteenbtn" value=15 onclick="send(15)">15%</button>
+            <button class="twbtn" id="twbtn" value=25 onclick="send(25)">25%</button>
+            <button class="fiftybtn" id="fiftybtn" value=50 onclick="send(50)">50%</button>
+            <input class="Custombtn" id="Custombtn" placeholder="   Custom" inputmode="numeric" onsubmit="send(100)"> 
           </section>
         <div class="people_input">
-          <h3 class="subtitle" class="N_people">Number of People</h3>
-          <form type="number" method="post" class="people_inputF">
-              <input placeholder="$" class="input" id="N_people">
-          </form>
+          <h3 class="SubTitle" class="N_people">Number of People</h3>
+              <input placeholder="$" class="input" id="N_people" inputmode="numeric">
+      </form>
         </div>
         <section class="result_panel">
           <h3 class="subtitle_Res" class="TipA">Tip Amount</h3>
@@ -45,7 +43,7 @@
           <h3 class="subtitle_res" class="Total">Total </h3>
           <p class="subRes2"> /person</p> <h2 id="totalP" class="totalP"> $ </h2>
 
-          <button id="reset_btn" class="reset_btn">Reset</button>
+          <button id="reset_btn" class="reset_btn" onclick="reset()">Reset</button>
         </section>
     </main>
   <div class="attribution">

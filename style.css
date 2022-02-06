@@ -149,6 +149,7 @@
   }
   .Custombtn {
     grid-area: customBtn;
+    width: 100%;
     height: 80%;
     background-color: hsl(185, 41%, 84%);
     border-radius: 2vh;
@@ -402,11 +403,14 @@
           grid-area: fiftyBTN;
         }
         .Custombtn {
+          width: 85%;
+          height: 80%;
           background-color: hsl(185, 41%, 84%); 
           color : hsl(183, 100%, 15%);
           border-color: hsl(185, 41%, 84%);
           border-radius: 5px;
           font-size: 20px;
+          text-align: right;
           margin: 5% 4% 5% 4%;
           grid-area: customBTN;
         }
