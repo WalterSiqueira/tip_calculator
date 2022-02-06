@@ -1,0 +1,730 @@
+/*small devices version */
+@media screen and (max-width:  480px) {
+  * {
+    margin:  0;
+    padding:  0;
+    font-family: Space-Mono;
+  }
+  body {
+    background-color: hsl(185, 41%, 84%);
+  }
+  .main_block {
+    display:  grid;
+    width: 100%;
+    height: 90%;
+    grid-template-areas:
+      ". form ."
+      ". TAmount .";
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 6fr 2fr 1fr;
+    border-radius: 2vh;
+    background-color: white;
+  }
+  /*block of the logo*/
+  .logo_block {
+    background-color: hsl(185, 41%, 84%);
+    width:  100%;
+    height: 12%;
+    display: grid;
+    grid-template-areas: 
+      ". . ."
+      ". center ."
+      ". . .";
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  /*logo image*/
+  .logo_svg {
+    grid-area: center;
+  }
+  .form_block {
+    width: 100%;
+    height: 100%;
+    grid-area: form;
+    display: grid;
+    grid-template-areas:
+      "ValueI"
+      "tipPanel"
+      "peopleI";
+    grid-template-columns: 4fr;
+    grid-template-rows: 2fr 4fr 2fr;
+  }
+  /*subtitles (select and number)*/
+  .subtitle {
+    margin: 10% 0 0 0;
+    color:  hsl(183, 100%, 15%);
+    font-size:  16px;
+  }
+  /*subtitle (bill)*/
+  .SubTitle {
+    color:  hsl(183, 100%, 15%);                                               
+    font-size:  16px;
+    grid-area: center;
+  }
+  /*input bar*/
+  .input {
+    margin: 10% 0 0 0;
+    width: 100%;
+    height: 40%;
+    font-size: 18px;
+    grid-area: center;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+    border-style: hidden;
+    text-align: right;
+  }
+
+  .value_input_block {
+    margin-top: 2%;
+    width:  100%;
+    height: 90%;
+    display: grid;
+    grid-template-areas: 
+      " ."
+      " center"
+      " .";
+    grid-template-columns:  8fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-area: ValueI;
+  } 
+
+  .tip_panel {
+    width:  100%;
+    height: 80%;
+    display: grid;
+    grid-template-areas:
+      "subTitle subTitle"
+      "fiveBtn tenBtn"
+      "fifteenBtn TFiveBtn"
+      "fiftyBtn customBtn";
+    grid-gap: 10px ;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr;
+    grid-area: tipPanel;
+  }
+  .fivebtn { 
+    grid-area: fiveBtn;
+    height: 80%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 2vh;
+    border-color: hsl(183, 100%, 15%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .tenbtn {
+    grid-area: tenBtn;
+    height: 80%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 2vh;
+    border-color: hsl(183, 100%, 15%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .fifteenbtn {
+    grid-area: fifteenBtn;
+    height: 80%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 2vh;
+    border-color: hsl(183, 100%, 15%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .twbtn {
+    grid-area: TFiveBtn;
+    height: 80%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 2vh;
+    border-color: hsl(183, 100%, 15%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .fiftybtn {
+    grid-area: fiftyBtn;
+    height: 80%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 2vh;
+    border-color: hsl(183, 100%, 15%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .Custombtn {
+    grid-area: customBtn;
+    width: 100%;
+    height: 80%;
+    background-color: hsl(185, 41%, 84%);
+    border-radius: 2vh;
+    border-color: hsl(185, 41%, 84%);
+    color:  hsl(0, 0%, 100%);
+    font-size:  20px;
+  }
+  .people_input {
+     margin-top: 2%;                                                             
+     width:  100%;                                                               
+     height: 90%;                                                                
+     display: grid;                                                              
+     grid-template-areas:                                                        
+        " ."                                                                      
+        " center"                                                                 
+        " .";                                                                     
+     grid-template-columns:  8fr;                                                
+     grid-template-rows: 0.2fr 2fr 0.2fr;
+     grid-area: peopleI;
+  }
+
+  .result_panel {
+    width:  100%;
+    height: 100%;
+    border-radius: 5%;
+    background-color: hsl(183, 100%, 18%);
+    display:  grid;
+    grid-template-areas:
+      ". tiptitle outputone"
+      ". personsub ."
+      ". totaltitle outputtwo"
+      ". personsubtwo ."
+      ". resetbtn resetbtn";
+    grid-template-columns:  1fr 2fr 2fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-area: TAmount;
+  }
+  .subtitle_Res {
+    margin: 15% 0 0 0;
+    color:  hsl(0, 0%, 100%);
+    font-size:  14px;
+    grid-area: tiptitle;
+  }
+  .tipAP {
+    margin: 15% 0 0 0;
+    color: hsl(172, 67%, 45%);
+    font-size:  20px;
+    grid-area: outputone;
+    word-spacing: 1em;
+  }
+  .subRes1 {
+    color:  hsl(186, 14%, 43%);
+    grid-area: personsub;
+  }
+  .subtitle_res {
+    margin: 2% 0 0 0;
+    color:  hsl(0, 0%, 100%);
+    font-size:  14px;
+    grid-area: totaltitle;
+  }
+  .totalP {
+    margin: 2% 0 0 0;
+    color: hsl(172, 67%, 45%);
+    font-size:  20px;
+    grid-area: outputtwo;
+    word-spacing: 1em;
+  }
+  .subRes2 {
+    color:  hsl(186, 14%, 43%);
+    grid-area: personsubtwo;
+  }
+  .reset_btn {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    margin: 0 0 5% 0;
+    font-size:  20px;
+    border-radius: 5%;
+    border-color: hsl(172, 67%, 45%);
+    grid-area: resetbtn;
+  }
+
+}
+/* medium devices */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    * { 
+      margin:  0;                                                                
+      padding:  0;                                                               
+      font-family: Space-Mono;
+    }
+      body {
+      background-color: hsl(185, 41%, 84%);
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-areas: 
+        ". logoblock ."
+        ". mainblock ."
+        ". footblock .";
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
+      grid-gap: 0;
+    }
+    .logo_block {
+      grid-area: logoblock;
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-areas: 
+        ". . ."
+        ". center ."
+        ". . .";
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+        .logo_svg {
+          margin: 0 0 0 25%;
+          grid-area: center;
+        }
+
+    .main_block {
+      width: 100%;
+      height: 100%;
+      grid-area: mainblock;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 10px;
+      display: grid;
+      grid-template-areas:  
+        "form resultPanel"
+        "form resultPanel"
+        "form resultPanel";
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: 0.5fr 1fr 0.5fr;
+    }
+    .form_block {                                                                 
+      width: 100%;                                                                
+      height: 100%;                                                               
+      grid-area: form;                                                            
+      display: grid;                                                              
+      grid-template-areas:                                                        
+        "ValueI"                                                                  
+        "tipPanel"                                                                
+        "peopleI";                                                                
+      grid-template-columns: 4fr;                                                 
+      grid-template-rows: 2fr 4fr 2fr;                                            
+    }
+     .subtitle {
+      margin: 5% 0 0 0;
+      color:  hsl(183, 100%, 15%);                                               
+      font-size:  16px; 
+      grid-area: title;
+    }
+    .value_input_block {
+      grid-area: ValueI;
+      display: grid;
+      grid-template-areas: 
+        ". . ."
+        ". center."
+        ". . .";
+      grid-template-columns: 0.2fr 4fr 0.2fr;
+      grid-template-rows: 0.5fr 1fr 0.5fr;
+    }
+        .SubTitle {
+          width: 100%;
+          height: 100%;
+          color:  hsl(183, 100%, 15%);
+          font-size: 16px;
+          margin: 1% 0 0 0;
+          grid-area: center;
+        }
+
+    .people_input {
+      grid-area: peopleI;
+      display: grid;                                                           
+      grid-template-areas:                                                
+         ". . ."                                                           
+         ". center."                                                       
+         ". . .";                                                          
+      grid-template-columns: 0.2fr 4fr 0.2fr;                             
+      grid-template-rows: 0.5fr 1fr 0.5fr;
+    }
+
+        .input {
+          margin: 10% 0 0 0;
+          width: 100%;                                                              
+          height: 50%;                                                              
+          font-size: 20px;                                                                                                                 
+          color: hsl(183, 100%, 15%);                                               
+          background-color: hsl(185, 41%, 84%);                                      
+          border-style: hidden;                                                     
+          text-align: right;
+          grid-area: center;
+        }
+    .tip_panel {
+      margin: 2% 0 0 0;
+      grid-area: tipPanel;
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-areas:  
+        ". title title title ."
+        ". fiveBTN tenBTN fifteenBTN ."
+        ". twBTN fiftyBTN customBTN .";
+      grid-template-columns: 0.2fr 2fr 2fr 2fr 0.2fr;
+      grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr;
+      grid-gap: 1%;
+    }
+        .fivebtn {
+          background-color: hsl(183, 100%, 15%);
+          color: hsl(0, 0%, 100%);
+          border-color: hsl(183, 100%, 15%);
+          border-radius: 5px;
+          font-size: 20px;
+          margin: 5% 4% 5% 4%;
+          grid-area: fiveBTN;
+        }
+        .tenbtn {
+          background-color: hsl(183, 100%, 15%);
+          color: hsl(0, 0%, 100%);
+          border-color: hsl(183, 100%, 15%);
+          border-radius: 5px;
+          font-size: 20px;
+          margin: 5% 4% 5% 4%;
+          grid-area: tenBTN;
+        }
+        .fifteenbtn {
+          background-color: hsl(183, 100%, 15%);
+          color: hsl(0, 0%, 100%);
+          border-radius: 5px;
+          font-size: 20px;
+          border-color: hsl(183, 100%, 15%);
+          margin: 5% 4% 5% 4%;
+          grid-area: fifteenBTN;
+        }
+        .twbtn {
+          background-color: hsl(183, 100%, 15%);
+          color: hsl(0, 0%, 100%);
+          border-color: hsl(183, 100%, 15%);
+          border-radius: 5px;
+          font-size: 20px;
+          margin: 5% 4% 5% 4%;
+          grid-area: twBTN;
+        }
+        .fiftybtn {
+          background-color: hsl(183, 100%, 15%);
+          color: hsl(0, 0%, 100%); 
+          border-color: hsl(183, 100%, 15%);
+          border-radius: 5px;
+          font-size: 20px;
+          margin: 5% 4% 5% 4%; 
+          grid-area: fiftyBTN;
+        }
+        .Custombtn {
+          width: 85%;
+          height: 80%;
+          background-color: hsl(185, 41%, 84%); 
+          color : hsl(183, 100%, 15%);
+          border-color: hsl(185, 41%, 84%);
+          border-radius: 5px;
+          font-size: 20px;
+          text-align: right;
+          margin: 5% 4% 5% 4%;
+          grid-area: customBTN;
+        }
+    .result_panel {
+      margin: 5% 0 5% 0;
+      background-color: hsl(183, 100%, 15%);
+      border-radius: 10px;
+      grid-area: resultPanel; 
+      display: grid;
+      width: 90%;
+      height: 90%;
+      grid-template-areas: 
+        " . ."
+        " title tipAmount" 
+        " title2 resultA" 
+        " . ."
+        " reset reset ";
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: 0.2fr 0.5fr 0.5fr 1fr 0.5fr ;  
+      grid-gap: 1%;
+    }
+        .subtitle_Res {
+          color: hsl(0, 0%, 100%);
+          margin: 0 0 0 10%;
+          grid-area: title;
+        }
+        .subRes1 {
+          color: hsl(186, 14%, 43%); 
+          margin: 10% 0 0 11%;
+          grid-area: title;
+        }
+        .tipAP {
+          font-size: 25px;
+          color: hsl(172, 67%, 45%);
+          grid-area: tipAmount;  
+          word-spacing: 1em;
+        }
+        .subtitle_res {
+          color: hsl(0, 0%, 100%);
+          margin: 0 0 0 10%;
+          grid-area: title2;
+        }
+        .subRes2 {
+          color: hsl(186, 14%, 43%); 
+          margin: 10% 0 0 11%;
+          grid-area: title2;
+        }
+        .totalP {
+          font-size: 30px;
+          color: hsl(172, 67%, 45%);
+          grid-area: resultA;
+          word-spacing: 1em;
+        }
+        .reset_btn {
+          width: 95%;
+          height: 80%;
+          background-color: hsl(183, 100%, 25%); 
+          border-color: hsl(183, 100%, 15%);
+          border-radius: 10px;
+          margin: 0 2% 0 2%;
+          grid-area: reset;
+        }
+    .attribution {
+      width: 100%;
+      height: 100%;
+      grid-area: footblock;
+    }
+}
+/*large devices*/
+@media screen and (min-width: 1025px) {
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Space-Mono;
+    }
+    body {
+      background-color: hsl(185, 41%, 84%);                                    
+      display: grid;                                                           
+      width: 100%;
+      height: 100%;
+      grid-template-areas:                                                     
+        ". logoblock ."                                                        
+        ". mainblock ."                                                        
+        ". footblock ."; 
+      grid-template-columns: 2fr 8fr 2fr;
+      grid-template-rows: 2fr 8fr 1fr;
+    }
+    .logo_block {
+      grid-area: logoblock;                                                    
+      display: grid;                                                           
+      grid-template-areas:                                                     
+        ". . ."                                                                
+        ". center ."                                                           
+        ". . .";
+      grid-template-columns: 2fr 1fr 2fr;
+      grid-template-rows: 0.5fr 0.2fr 0.5fr;
+    }
+        .logo_svg {
+            margin: 0 0 0 35%;
+            grid-area: center;
+        }
+    .main_block {
+      grid-area: mainblock;                                                  
+      background-color: hsl(0, 0%, 100%);                                      
+      border-radius: 10px;                                                     
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-areas:                                                     
+        "form resultPanel"                                               
+        "form resultPanel"                                                 
+        "form resultPanel";
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: 1fr 2fr 1fr;
+    }   
+        .subtitle {
+          width: 100%;
+          height: 100%;
+           color:  hsl(183, 100%, 15%);                                             
+           font-size:  16px; 
+           grid-area: title;
+        }
+        .input {
+           width: 100%;                                                        
+           height: 50%;                                                        
+           font-size: 20px;                                                     
+           color: hsl(183, 100%, 15%);                                          
+           background-color: hsl(185, 41%, 84%);                                
+           border-style: hidden;                                                
+           text-align: right; 
+           grid-area: center;
+           margin: 5% 0 0 0;
+        }
+        .form_block {
+          width: 100%;                                                        
+          height: 100%;                                                       
+          grid-area: form;                                                    
+          display: grid;                                                      
+          grid-template-areas:                                                
+            "ValueI"                                                          
+            "tipPanel"                                                        
+            "peopleI";                                                        
+          grid-template-columns: 4fr;                                         
+          grid-template-rows: 2fr 4fr 2fr; 
+        }
+        .value_input_block {
+            grid-area: ValueI;                                           
+            display: grid;                                                           
+            grid-template-areas:                                                     
+              ". . ."                                                                
+              ". center."                                                            
+              ". . .";
+            grid-template-columns: 0.2fr 4fr 0.2fr;
+            grid-template-rows: 0.5fr 1fr 0.2fr;
+        }
+            .SubTitle {
+                width: 100%;
+                height: 100%;
+                color:  hsl(183, 100%, 15%);                                         
+                font-size: 16px;                                                     
+                grid-area: center;
+            } 
+        .tip_panel {
+            grid-area: tipPanel;
+            margin: 20px 0 0 0;                                                                                                           
+            display: grid;
+            width: 100%;
+            height: 70%;
+            grid-template-areas:                                                     
+                ". title title title "                                                
+                ". fiveBTN tenBTN fifteenBTN "                                        
+                ". twBTN fiftyBTN customBTN ";
+            grid-template-columns: 0.2fr 1fr 1fr 1fr;
+            grid-template-rows: 0.2fr 0.5fr 0.5fr;
+        }
+            .fivebtn {
+              height: 70%;
+              width: 80%;
+              background-color: hsl(183, 100%, 15%);                               
+              color: hsl(0, 0%, 100%);                                             
+              border-color: hsl(183, 100%, 15%);                                   
+              border-radius: 5px;                                                  
+              font-size: 20px;                                                     
+              margin: 10% 8% 10% 8%;
+              grid-area: fiveBTN;
+            }
+            .tenbtn {
+              height: 70%;
+              width: 80%;
+              background-color: hsl(183, 100%, 15%);                               
+              color: hsl(0, 0%, 100%);                                             
+              border-color: hsl(183, 100%, 15%);                                   
+              border-radius: 5px;                                                  
+              font-size: 20px;                                                     
+              margin: 10% 8% 10% 8%;
+              grid-area: tenBTN;
+            }
+            .fifteenbtn {
+              height: 70%;
+              width: 80%;
+              background-color: hsl(183, 100%, 15%);                               
+              color: hsl(0, 0%, 100%);                                             
+              border-color: hsl(183, 100%, 15%);                                   
+              border-radius: 5px;                                                  
+              font-size: 20px;                                                     
+              margin: 10% 8% 10% 8%;
+              grid-area: fifteenBTN;
+            }
+            .twbtn {
+              height: 70%;
+              width: 80%;
+              background-color: hsl(183, 100%, 15%);                               
+              color: hsl(0, 0%, 100%);                                             
+              border-color: hsl(183, 100%, 15%);                                   
+              border-radius: 5px;                                                  
+              font-size: 20px;                                                     
+              margin: 10% 8% 10% 8%;
+              grid-area: twBTN;
+            }
+            .fiftybtn {
+              height: 70%;
+              width: 80%;
+              background-color: hsl(183, 100%, 15%);                               
+              color: hsl(0, 0%, 100%);                                             
+              border-color: hsl(183, 100%, 15%);                                   
+              border-radius: 5px;                                                  
+              font-size: 20px;                                                     
+              margin: 10% 8% 10% 8%;
+              grid-area: fiftyBTN;
+            }
+            .Custombtn {
+              width: 80%;
+              height: 60%;
+              background-color: hsl(185, 41%, 84%);                                
+              color : hsl(183, 100%, 15%);                                         
+              border-color: hsl(185, 41%, 84%);                                    
+              border-radius: 5px;                                                  
+              font-size: 20px;                                                     
+              margin: 10% 0 5% 7%;
+              grid-area: customBTN;
+            }
+        .people_input {
+            display: grid;                                                           
+            width: 100%;
+            height: 100%;
+            grid-template-areas:                                          
+              ". . ."                                                     
+              ". center."                                                 
+              ". . .";                                                    
+            grid-template-columns: 0.2fr 4fr 0.2fr;                       
+            grid-template-rows: 0.5fr 1fr 0.2fr;
+            grid-area: peopleI;
+        }
+            
+        .result_panel {
+          margin: 20px;                                                            
+          background-color: hsl(183, 100%, 15%);                                   
+          border-radius: 10px;                                                     
+          grid-area: resultPanel;                                                  
+          display: grid;
+          grid-template-areas:                                                                                                                     
+              " title tipAmount"                                                     
+              " title2 resultA"                                                      
+              " . ."                                                                 
+              " reset reset ";
+          grid-template-columns: 2fr 2fr;
+          grid-template-rows: 0.5fr 0.5fr 1fr 0.5fr;
+          grid-area: resultPanel;
+        }
+            .subtitle_Res {
+                color: hsl(0, 0%, 100%);                                             
+                margin: 10% 0 0 10%;                                             
+                grid-area: title; 
+            }
+            .subRes1 {
+                color: hsl(186, 14%, 43%);                                             
+                margin: 20% 0 0 11%;                                              
+                grid-area: title;
+            }
+            .tipAP {
+                margin: 10% 0 0 0;
+                font-size: 25px;                                                     
+                color: hsl(172, 67%, 45%);                                           
+                grid-area: tipAmount;
+                word-spacing: 1em;
+            }
+            .subtitle_res {
+                color: hsl(0, 0%, 100%);                                             
+                margin: 10% 0 0 11%;                                             
+                grid-area: title2;
+            }
+            .subRes2 {
+                color: hsl(186, 14%, 43%);                                            
+                margin: 20% 0 0 11%;                                              
+                grid-area: title2;
+            }
+            .totalP {
+                margin: 10% 0 0 0; 
+                font-size: 30px;                                                     
+                color: hsl(172, 67%, 45%);                                           
+                grid-area: resultA;
+                word-spacing: 1em;
+            }
+            .reset_btn {                                                           
+                background-color: hsl(183, 100%, 25%);                               
+                border-color: hsl(183, 100%, 15%);                                   
+                border-radius: 10px;                                                 
+                width: 90%;
+                height: 80%;
+                margin: 2% 10% 5% 5%;                                         
+                grid-area: reset;                                                    
+            }
+      .attribution {
+        grid-area: footblock;
+      }
+
+}

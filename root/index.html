@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="font" href="https://fonts.google.com/specimen/Space+Mono)">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+    <header class="logo_block"> <img src="./images/logo.svg" class="logo_svg"> </header>
+    <main class="main_block">
+      <form class="form_block" " id="formBlock">
+          <section class="value_input_block">
+            <h3 class="SubTitle">Bill</h3>
+              <input placeholder="$" class='input' id="bill" inputmode="numeric">
+          </section>
+          <section class="tip_panel">
+            <h3 class="subtitle" class="SelectTip">Select Tip %</h3>
+            <button class="fivebtn" id="fivebtn" onclick="send(5)" value=5 >5%</button>
+            <button class="tenbtn" id="tenbtn" value=10 onclick="send(10)">10%</button>
+            <button class="fifteenbtn" id="fifteenbtn" value=15 onclick="send(15)">15%</button>
+            <button class="twbtn" id="twbtn" value=25 onclick="send(25)">25%</button>
+            <button class="fiftybtn" id="fiftybtn" value=50 onclick="send(50)">50%</button>
+            <input class="Custombtn" id="Custombtn" placeholder="   Custom" inputmode="numeric" onsubmit="send(100)"> 
+          </section>
+        <div class="people_input">
+          <h3 class="SubTitle" class="N_people">Number of People</h3>
+              <input placeholder="$" class="input" id="N_people" inputmode="numeric">
+      </form>
+        </div>
+        <section class="result_panel">
+          <h3 class="subtitle_Res" class="TipA">Tip Amount</h3>
+          <p class="subRes1"> /person</p> <h2 id="tipAP" class="tipAP"> $&nbsp</h2>
+
+          <h3 class="subtitle_res" class="Total">Total </h3>
+          <p class="subRes2"> /person</p> <h2 id="totalP" class="totalP"> $ </h2>
+
+          <button id="reset_btn" class="reset_btn" onclick="reset()">Reset</button>
+        </section>
+    </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.linkedin.com/in/walter-siqueira"> Walter Siqueira</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
